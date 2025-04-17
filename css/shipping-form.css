@@ -1,0 +1,36 @@
+.card {
+    border: none;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    border-radius: 15px;
+}
+
+.card-header {
+    border-radius: 15px 15px 0 0 !important;
+    padding: 20px 30px;
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.form-control {
+    border-radius: 8px;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #717fe0;
+    box-shadow: 0 0 0 0.2rem rgba(113,127,224,0.25);
+}
+
+label {
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.bg3 {
+    background-color: #717fe0;
+}

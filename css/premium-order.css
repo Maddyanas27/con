@@ -1,0 +1,351 @@
+:root {
+    --premium-gold: #B8860B;
+    --premium-black: #222222;
+    --font-primary: 'Playfair Display', serif;
+    --font-secondary: 'Montserrat', sans-serif;
+}
+
+/* Container height adjustments */
+.order-container {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+/* Form container adjustments */
+.bg0.p-t-45.p-b-85 {
+    padding-top: 1.5rem; /* Reduced from 45px */
+    padding-bottom: 2rem; /* Reduced from 85px */
+}
+
+.order_placed {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.order_placed h1 {
+    color: #333;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Table adjustments */
+.table-shopping-cart {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    margin: 20px 0;
+}
+
+.table_head {
+    background-color: #f8f9fa;
+}
+
+.table_head th {
+    padding: 15px 25px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    border-bottom: 2px solid #e0e0e0;
+    white-space: nowrap;
+}
+
+.table_head th.text-right {
+    text-align: right !important;
+}
+
+.table_head th.column-3 {
+    border-left: 1px solid #e6e6e6;
+    padding-left: 40px !important;
+}
+
+.table_head th.column-4 {
+    padding-right: 40px !important;
+}
+
+.table_row {
+    transition: all 0.3s ease;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.table_row:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.table_row td {
+    padding: 20px 15px;
+    vertical-align: middle;
+}
+
+.table_row:hover td {
+    background-color: #f8f9fa;
+}
+
+.column-1 {
+    width: 200px;
+    padding: 15px !important;
+    text-align: center;
+}
+
+.column-1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.column-2 {
+    width: 25%;
+    text-align: left !important;
+    padding-left: 30px !important;
+}
+
+.column-2 div {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.column-3 {
+    text-align: center !important;
+    width: 15%;
+    padding-left: 40px !important;
+    position: relative;
+}
+
+.column-3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 20%;
+    height: 60%;
+    width: 1px;
+    background-color: #e6e6e6;
+}
+
+.column-4 {
+    text-align: center !important;
+    width: 15%;
+    padding-right: 40px !important;
+    position: relative;
+}
+
+.column-5 {
+    text-align: center !important;
+    min-width: 120px;
+}
+
+.column-5.text-right {
+    text-align: right !important;
+    padding-right: 25px !important;
+}
+
+.how-itemcart1 {
+    width: 60px;
+    height: 60px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 0 auto 10px auto;
+}
+
+.how-itemcart1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Add hover effect for better user experience */
+.how-itemcart1:hover img {
+    transform: scale(1.1);
+}
+
+.product-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin-top: 8px;
+}
+
+.p-b-10 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.num_pro {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Button size adjustments */
+.order_delete {
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 5px;
+    background: #ff4444;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.order_delete:hover {
+    background: #cc0000;
+    transform: translateY(-2px);
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from { 
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Updated header styles */
+.header-v4 {
+    background: white;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    height: 70px; /* Reduced from default */
+}
+
+.wrap-menu-desktop {
+    height: 70px; /* Reduced from 80px */
+    background: transparent;
+    box-shadow: none;
+    transition: all 0.3s ease;
+}
+
+/* Logo size adjustment */
+.logo img {
+    max-height: 35px; /* Reduced from default */
+    transition: all 0.3s ease;
+}
+
+/* Profile menu adjustments */
+.profile-menu {
+    height: 70px; /* Match header height */
+    display: flex;
+    align-items: center;
+}
+
+.user-info {
+    padding: 0.5rem 1rem; /* Reduced padding */
+}
+
+.welcome-text {
+    font-size: 0.9rem; /* Slightly smaller text */
+    font-family: var(--font-secondary);
+}
+
+/* Dropdown adjustments */
+.profile-dropdown {
+    top: 60px; /* Adjusted for smaller header */
+    padding: 0.75rem 0;
+}
+
+.profile-dropdown a {
+    padding: 0.5rem 1.25rem; /* Reduced padding */
+    font-size: 0.9rem;
+}
+
+/* Mobile header adjustments */
+.wrap-header-mobile {
+    height: 60px; /* Reduced height for mobile */
+}
+
+.logo-mobile img {
+    max-height: 30px; /* Reduced logo size for mobile */
+}
+
+.profile-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border-radius: 12px;
+    padding: 1rem 0;
+    min-width: 200px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.profile-menu:hover .profile-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.profile-dropdown a {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    color: var(--premium-black);
+    font-family: var(--font-secondary);
+    transition: all 0.3s ease;
+}
+
+.profile-dropdown a:hover {
+    background: rgba(184, 134, 11, 0.1);
+    color: var(--premium-gold);
+    transform: translateX(5px);
+}
+
+/* Status badge styles */
+.status-badge {
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-block;
+    text-align: center;
+    min-width: 120px;
+}
+
+.status-badge.pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.status-badge.delivered {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status-badge.cancelled {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.text-right {
+    text-align: right !important;
+    padding-right: 25px !important;
+}

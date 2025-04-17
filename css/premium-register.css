@@ -1,0 +1,197 @@
+:root {
+    --premium-gold: #B8860B;
+    --premium-gold-light: #D4A84B;
+    --premium-black: #222222;
+    --premium-gradient: linear-gradient(135deg, var(--premium-gold) 0%, var(--premium-gold-light) 100%);
+    --font-primary: 'Playfair Display', serif;
+    --font-secondary: 'Montserrat', sans-serif;
+}
+
+.premium-register-container {
+    background: linear-gradient(to right bottom, rgba(255,255,255,0.95), rgba(255,255,255,0.98));
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(184, 134, 11, 0.1);
+    padding: 3.5rem;
+    margin: 2rem auto;
+    margin-top: -2rem;  /* Moves container upward */
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.premium-register-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--premium-gradient);
+}
+
+.register-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.register-header h4 {
+    font-family: var(--font-primary);
+    font-size: 2.5rem;
+    color: var(--premium-black);
+    margin-bottom: 1rem;
+    animation: fadeInDown 0.6s ease-out;
+}
+
+.register-header p {
+    font-family: var(--font-secondary);
+    color: #666;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    animation: slideUp 0.6s ease-out;
+}
+
+.premium-label {
+    font-family: var(--font-secondary);
+    color: var(--premium-black);
+    margin-bottom: 0.8rem;
+    display: block;
+    font-weight: 500;
+}
+
+.premium-input {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border: 2px solid rgba(184, 134, 11, 0.2);
+    border-radius: 12px;
+    font-family: var(--font-secondary);
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.premium-input:focus {
+    border-color: var(--premium-gold);
+    box-shadow: 0 0 0 4px rgba(184, 134, 11, 0.1);
+    transform: translateY(-2px);
+}
+
+.premium-btn {
+    background: var(--premium-gradient);
+    color: white;
+    font-family: var(--font-secondary);
+    font-weight: 500;
+    width: auto;  /* Change from 100% to auto */
+    min-width: 200px;  /* Set minimum width */
+    padding: 1rem 2rem;  /* Reduce padding */
+    font-size: 0.95rem;  /* Reduce font size */
+    margin: 0.5rem auto;  /* Center button with auto margins */
+    display: block;  /* Make button block to allow margin auto */
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.premium-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(184, 134, 11, 0.2);
+}
+
+/* Add specific styling for the sign in button */
+.text-center .premium-btn {
+    min-width: 160px;  /* Smaller minimum width for sign in */
+    padding: 0.875rem 1.5rem;  /* Slightly smaller padding */
+}
+
+.premium-divider {
+    text-align: center;
+    position: relative;
+    margin: 2rem 0;
+}
+
+.premium-divider::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    background: rgba(184, 134, 11, 0.2);
+}
+
+.premium-divider span {
+    background: white;
+    padding: 0 1rem;
+    color: var(--premium-gold);
+    position: relative;
+    font-family: var(--font-secondary);
+}
+
+.bread-crumb {
+    margin-bottom: -1rem;  /* Reduces space between logo and container */
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .premium-register-container {
+        margin-top: -1.5rem;
+    }
+    
+    .bread-crumb {
+        margin-bottom: -0.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .premium-register-container {
+        margin-top: -1rem;
+    }
+    
+    .bread-crumb {
+        margin-bottom: 0;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

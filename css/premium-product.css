@@ -1,0 +1,193 @@
+:root {
+  --premium-gold: #B8860B;
+  --premium-black: #222222;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Premium Product Grid */
+.isotope-grid {
+  margin-top: 2rem;
+}
+
+.block2 {
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+.block2:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 30px rgba(184, 134, 11, 0.15);
+}
+
+.block2-pic {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+}
+
+.block2-pic img {
+  transition: var(--transition);
+}
+
+.block2:hover .block2-pic img {
+  transform: scale(1.05);
+}
+
+/* Product Text Styling */
+.block2-txt {
+  padding: 1.5rem;
+}
+
+.js-name-b2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: var(--premium-black);
+  transition: var(--transition);
+}
+
+.js-name-b2:hover {
+  color: var(--premium-gold);
+}
+
+.stext-105 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: var(--premium-gold);
+}
+
+/* Filter Buttons */
+.filter-tope-group button,
+.filter-tope-group a {
+  background: transparent;
+  border: 2px solid var(--premium-gold);
+  color: var(--premium-black);
+  border-radius: 25px;
+  padding: 8px 25px;
+  transition: var(--transition);
+}
+
+.filter-tope-group button:hover,
+.filter-tope-group a:hover,
+.how-active1 {
+  background: var(--premium-gold);
+  color: white !important;
+}
+
+/* Filter Button Styling */
+.filter-tope-group button {
+    color: #B8860B;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid #B8860B;
+}
+
+.filter-tope-group button.how-active1 {
+    background-color: #B8860B;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(184, 134, 11, 0.2);
+}
+
+.filter-tope-group button:hover {
+    background-color: #B8860B;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(184, 134, 11, 0.2);
+}
+
+/* Style for other filter buttons to match */
+.stext-106.cl6.hov1.bor3.trans-04 {
+    color: #B8860B;
+    border-color: #B8860B;
+}
+
+.stext-106.cl6.hov1.bor3.trans-04:hover {
+    background-color: #B8860B;
+    color: #ffffff;
+}
+
+/* Search Bar */
+.panel-search {
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: 2px solid #B8860B;
+}
+
+.search-product {
+  border: none;
+  padding: 15px 20px;
+  font-size: 1rem;
+  width: 100%;
+  font-family: 'Playfair Display', serif;
+  color: #B8860B;
+}
+
+/* Search Button Styling */
+.flex-c-m.stext-106.cl6.size-105.bor4.pointer.hov-btn3.trans-04.m-tb-4 {
+    color: #B8860B;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    border: 2px solid #B8860B;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.flex-c-m.stext-106.cl6.size-105.bor4.pointer.hov-btn3.trans-04.m-tb-4:hover {
+    background-color: #B8860B;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(184, 134, 11, 0.2);
+}
+
+/* Search Icon Styling */
+.icon-search.cl2.m-r-6.fs-15.trans-04.zmdi.zmdi-search,
+.icon-close-search.cl2.m-r-6.fs-15.trans-04.zmdi.zmdi-close {
+    color: #B8860B;
+    transition: all 0.3s ease;
+}
+
+.flex-c-m.stext-106.cl6.size-105.bor4.pointer.hov-btn3.trans-04.m-tb-4:hover .icon-search,
+.flex-c-m.stext-106.cl6.size-105.bor4.pointer.hov-btn3.trans-04.m-tb-4:hover .icon-close-search {
+    color: #ffffff;
+}
+
+/* Pagination */
+.how-pagination1 {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid var(--premium-gold);
+  color: var(--premium-black);
+  transition: var(--transition);
+}
+
+.how-pagination1:hover,
+.active-pagination1 {
+  background-color: var(--premium-gold);
+  color: white;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.isotope-item {
+  animation: fadeIn 0.6s ease forwards;
+  opacity: 0;
+}
+
+.isotope-item:nth-child(even) {
+  animation-delay: 0.2s;
+}
+
+.isotope-item:nth-child(odd) {
+  animation-delay: 0.4s;
+}

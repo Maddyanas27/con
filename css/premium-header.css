@@ -1,0 +1,274 @@
+/* Add these font imports at the top of your CSS file */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Raleway:wght@300;400;500;600&family=Marcellus&display=swap');
+
+:root {
+  --font-primary: 'Cormorant Garamond', serif;
+  --font-secondary: 'Raleway', sans-serif;
+  --font-accent: 'Marcellus', serif;
+  --premium-black: #222222;
+  --premium-gold: #B8860B;
+  --header-height: 60px; /* Reduced from 70px */
+}
+
+.premium-header {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.premium-header.scrolled {
+  padding: 10px 0;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.top-bar {
+  background: var(--premium-black);
+  color: #fff;
+  padding: 10px 0;
+  font-size: 0.9rem;
+}
+
+.premium-text {
+  position: relative;
+  padding-left: 24px;
+}
+
+.premium-text::before {
+  content: '🎁';
+  position: absolute;
+  left: 0;
+  animation: bounce 2s infinite;
+}
+
+.main-header {
+  padding: 10px 0; /* Reduced from 15px */
+  transition: all 0.3s ease;
+}
+
+.main-header.scrolled {
+  padding: 8px 0; /* Reduced from 10px */
+}
+
+.logo {
+  display: block;
+}
+
+.logo img {
+  max-height: 30px; /* Reduced from 35px */
+  transition: all 0.3s ease;
+}
+
+.logo-text {
+  font-family: var(--font-accent);
+  font-size: 1.8rem;
+  letter-spacing: 0.1em;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+}
+
+/* Navigation link hover effect */
+.nav-link {
+  color: #000000;
+  font-family: var(--font-secondary);
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 4px 16px; /* Reduced from 6px */
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: #B8860B;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #B8860B;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  margin-top: -2px; /* Fine-tune vertical alignment */
+}
+
+.header-icons {
+  display: flex;
+  gap: 20px;
+}
+
+/* Header icons hover effect */
+.header-icon {
+  color: #000000;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.header-icon:hover {
+  color: #B8860B;
+  transform: translateY(-2px);
+}
+
+/* Cart count badge */
+.cart-count {
+  position: absolute;
+  top: -6px; /* Reduced from -8px */
+  right: -10px; /* Reduced from -12px */
+  background: #B8860B;
+  color: #ffffff;
+  font-family: var(--font-secondary);
+  font-size: 0.7rem;
+  font-weight: 600;
+  height: 16px; /* Reduced from 18px */
+  width: 16px; /* Reduced from 18px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  min-width: 220px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px); /* Reduced from 15px */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1000;
+}
+
+.profile-menu:hover .profile-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(5px); /* Reduced from 8px */
+}
+
+/* Profile dropdown hover effects */
+.profile-dropdown li a {
+  color: #000000;
+  font-family: var(--font-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 10px 15px;
+  display: block;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.profile-dropdown li a:hover {
+  background: rgba(184, 134, 11, 0.1);
+  color: #B8860B;
+  transform: translateX(5px);
+}
+
+/* Profile menu hover effects */
+.user-name {
+  display: flex;
+  align-items: center;
+  color: #000000;
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.user-name i {
+  margin-right: 10px;
+  font-size: 1.4rem;
+  color: #000000;
+}
+
+.user-name span {
+  max-width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #000000;
+}
+
+.user-name:hover {
+  color: #B8860B;
+  transform: translateY(-2px);
+  opacity: 0.8;
+}
+
+.user-name:hover i {
+  color: #B8860B;
+}
+
+/* Login button hover effect */
+a.nav-link[href="login_home.php"]:hover {
+  background-color: #B8860B;
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(184, 134, 11, 0.3);
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* Add some spacing below header for fixed positioning */
+body {
+  padding-top: 60px; /* Reduced from 70px */
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+  .user-name {
+    font-size: 1rem;
+  }
+  
+  .user-name span {
+    max-width: 100px;
+  }
+
+  .nav-link {
+    font-size: 0.85rem;
+  }
+  
+  .logo-text {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,113 @@
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.fade-in-down {
+  animation: fadeInDown 0.6s ease-out;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.scale-in {
+  animation: scaleIn 0.4s ease-out;
+  transform-origin: center;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.premium-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.premium-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(31, 38, 135, 0.2);
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, #2193b0, #6dd5ed);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.premium-button {
+  background-color: #B8860B;
+  color: #ffffff;
+  padding: 12px 35px;
+  border-radius: 25px;
+  font-family: var(--font-primary);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  border: 2px solid #B8860B;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.premium-button:hover {
+  color: #B8860B;
+  background-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(184, 134, 11, 0.2);
+}
+
+/* Style for other shop now buttons to match */
+.block1-link.stext-101.cl0.trans-09,
+.flex-c-m.stext-101.cl5.size-103.bg2.bor1.hov-btn1.p-lr-15.trans-04 {
+  background-color: #B8860B;
+  border-color: #B8860B;
+}
+
+.block1-link.stext-101.cl0.trans-09:hover,
+.flex-c-m.stext-101.cl5.size-103.bg2.bor1.hov-btn1.p-lr-15.trans-04:hover {
+  background-color: transparent;
+  color: #B8860B;
+}

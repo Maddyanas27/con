@@ -1,0 +1,135 @@
+:root {
+  --primary-gradient: linear-gradient(45deg, #2193b0, #6dd5ed);
+  --hover-shadow: 0 10px 30px rgba(33, 147, 176, 0.2);
+}
+.premium-button {
+    background-color: #B8860B;
+    color: #ffffff;
+    padding: 12px 35px;
+    border-radius: 25px;
+    font-family: var(--font-primary);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    border: 2px solid #B8860B;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.premium-button:hover {
+    background-color: #ffffff;
+    color: #B8860B;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(184, 134, 11, 0.2);
+}
+
+/* Style for other shop now buttons to match */
+.block1-link.stext-101.cl0.trans-09,
+.flex-c-m.stext-101.cl5.size-103.bg2.bor1.hov-btn1.p-lr-15.trans-04 {
+    background-color: #B8860B;
+    color: #ffffff;
+    border-color: #B8860B;
+}
+
+.block1-link.stext-101.cl0.trans-09:hover,
+.flex-c-m.stext-101.cl5.size-103.bg2.bor1.hov-btn1.p-lr-15.trans-04:hover {
+    background-color: #ffffff;
+    color: #B8860B; 
+}
+
+/* Premium Animations */
+.premium-fade-in {
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUp 0.6s ease forwards;
+}
+
+.scale-in {
+  opacity: 0;
+  transform: scale(0.95);
+  animation: scaleIn 0.5s ease forwards;
+}
+
+/* Premium Card Styles */
+.premium-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.premium-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--hover-shadow);
+}
+
+/* Slider Enhancements */
+.section-slide {
+  position: relative;
+  overflow: hidden;
+}
+
+.item-slick1 {
+  position: relative;
+  transition: transform 0.5s ease;
+}
+
+.item-slick1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 100%);
+}
+
+/* Product Card Animations */
+.block2 {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.block2-pic::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--primary-gradient);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.block2:hover .block2-pic::before {
+  opacity: 0.1;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
