@@ -70,3 +70,5 @@ Please refer below screen-shot of Website home...
 ![Website home](https://github.com/Pratikginoya/Ecommerce-dynamic-website-with-admin-panel-using-php/assets/143998558/97255dad-7c1d-4207-8915-6219479abf43)
 
 "# con" 
+"# newcon" 
+"# newcon" 
